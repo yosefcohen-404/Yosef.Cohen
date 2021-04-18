@@ -1,0 +1,71 @@
+
+
+.grid-container{
+
+   display: grid; 
+   justify-items: center;
+   grid-template-columns: 300px auto auto;
+   grid-template-rows: auto;
+   grid-gap: 10px;
+   margin: 10px;
+   padding: 10px;
+   max-width: 100%;
+}
+
+.textMe{
+    grid-column: 1 / span 2;
+    background-color:rgba(226, 222, 209, 0.63);
+    padding: 25px;
+    width: 60vw;
+    height: 30vw;
+}
+
+.img{
+    grid-column: 3 / span 1;
+    background-color:rgba(226, 222, 209, 0.63);
+    width: 35vw;
+    height: 30vw;
+}
+
+.Mybutton{
+    font-family: cursive;
+    font-size: 1vw;
+    grid-column: 1 / span 2;
+    border: solid #bf9f5a;
+    width: 10vw;
+    height: 10vw;
+    background-color: white;
+    border-radius: 100%;
+    animation: pulse 4s infinite ;
+    text-align:  center;
+    margin: 0.5vw;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.Mybutton:hover {
+    background-color: #bf9f5a;
+    color:white;
+}
+
+.contact{
+    grid-column: 1/span 1;
+    width: 20vw;
+    height: 15vw;
+
+}
+
+@keyframes pulse{
+    0%,100%{
+        border: solid #bf9f5a;
+    }
+    50%{
+        border: solid  #777777;
+    }
+
+}
+
+
+@font-face{
+    font-family: quicksand;
+    src: url("../quicksand/quicksand.ttf");
+}
