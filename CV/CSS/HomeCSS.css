@@ -69,6 +69,12 @@
 
 }
 
+#currDate{
+    font-family: quicksand;
+    font-size: 4vw;
+    text-align: center;
+
+}
 
 @font-face{
     font-family: quicksand;
