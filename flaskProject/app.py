@@ -17,5 +17,15 @@ def hello_about():
 def hello_home():
     return redirect('/')
 
+
+@app.route('/customers')
+def customer_signup():
+    sign = True
+    if sign:
+        return redirect(url_for('hello_home'))
+    else:
+        return 'Please signup!'
+
+
 if __name__ == '__main__':
     app.run()
