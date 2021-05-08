@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assignment8</title>
+</head>
+<body>
+    {% block body %}
+    {% include('includeTitle.html') %}
+    {% if name %}
+        <h2>It's nice to meet you!</h2>
+    {% else %}
+        <h2>Don't be shy! tell me your name!</h2>
+    {% endif %}
+    <h2>My hobbies:</h2>
+    <ul>
+        {% for val in hobbies %}
+            <li>{{ val }}</li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>

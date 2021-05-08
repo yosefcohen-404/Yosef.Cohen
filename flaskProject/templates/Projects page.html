@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Yosef Cohen Projects </title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='CSS/GeneralCSS.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='CSS/ProjectsCSS1.css') }}">
+    </head>
+    <body>
+        <div class="header">
+            <h3 style="color:black" align="center">  My Main Projects </h3>
+        </div>
+        <hr class="hr">
+        <button type="submit" class="mybuttun" style="position: sticky; top: 0; float:right;" onclick="location.href='/'">Return to Home Page</button>
+        <div class="grid-container">
+
+
+               <div class="img">
+                   <img src="{{ url_for('static',filename='IMG/ML.jpg') }}" alt= "ML" width=400px >
+                </div>
+                <div class="text">
+                     <h3>Machine Learning</h3>
+                <p>
+                    ML models training, handling big data quality.
+                    <br>
+                    Technologies used: Python.
+                </p>
+                </div>
+
+            <div class="img">
+                <img src="{{ url_for('static',filename='IMG/LR.png') }}" width=400px>
+            </div>
+            <div class="text">
+                <h3> Linear Regression</h3>
+                <p>
+                    Statistical analysis of databases, forecast using LR.
+                    <br>
+                    Technology used: R.
+                </p>
+            </div>
+            <div class="img">
+                <img src="{{ url_for('static',filename='IMG/Bi.jpg') }}" width=400px >
+            </div>
+            <div class="text">
+                <h3> Business Intelligence </h3>
+                <p>
+                    Visualization of big data, organization analysis, DW and reports creation.
+                    <br>
+                    Languages: MySql, Talend, Tableau.
+                </p>
+            </div>
+        </div>
+        
+    </body>
+</html>

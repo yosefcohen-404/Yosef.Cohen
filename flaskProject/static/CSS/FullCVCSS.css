@@ -1,0 +1,72 @@
+*{
+    font-family:  cursive;
+}
+
+body {
+    background-color:white;
+}
+
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns:  auto 400px ;
+    grid-template-rows: 50px auto auto auto;
+    grid-gap: 70px;
+    padding: 20px;
+
+}
+
+.header{
+    color: black;
+    font-size: 40px;
+    font-family:  cursive;
+    grid-column: 2 / span 3;
+
+}
+
+.h2{
+    text-decoration: underline;
+}
+
+.text{
+    background-color:rgba(226, 222, 209, 0.63);
+    grid-column: 2 / span 2;
+    border: #bf9f5a solid;
+}
+
+.Rbuttun{
+
+    border: none;
+    width: 200px;
+    height: 100px;
+    background-color: #bf9f5a;
+    border-radius: 20%;
+    text-align:  center;
+    margin: 7px;
+    cursor: pointer;
+
+}
+
+.CVbuttun{
+    border: #bf9f5a solid;
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    border-radius: 20%;
+    animation: pulse 4s infinite ;
+    text-align:  center;
+    margin: 7px;
+    cursor: pointer;
+
+}
+
+@keyframes pulse{
+    0%,100%{
+        background-color: #bf9f5a;
+    }
+    50%{
+        background-color:  white;
+    }
+
+}

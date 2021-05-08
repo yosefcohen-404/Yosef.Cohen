@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yosef Cohen CV</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='CSS/GeneralCSS.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='CSS/HomeCSS.css') }}">
+        <script src="{{ url_for('static',filename='JS.js') }}"></script>
+    </head>
+    <body>
+
+
+        <div class="grid-container">
+            <div class="textMe">
+                <h1> Hi! I'm Yosef Cohen!</h1>
+                <p>
+                    Fourth-year B.Sc. student for Industrial Engineering (Information Systems major) at Ben-Gurion University.
+                    <br>
+                    Fast learner, reliable, charismatic, excellent teamwork and communication skills.
+                </p>
+                <br>
+                <div class="ButtonsContainer" align="center">
+                    <!-- add onclick="location.href='../html/page name.html'" -->
+                <button type="submit" class="Mybutton" onclick="location.href='Full cv'"> Full CV </button>
+                <button type="submit" class="Mybutton" onclick="location.href='Projects'"> Projects </button>
+                <button type="submit" class="Mybutton" onclick="location.href='Contact me'"> Contact Me </button>
+                <button type="submit" class="Mybutton" onclick="location.href='Contact List'"> Contact List </button>
+                <button type="submit" class="Mybutton" onclick="location.href='assignment8'"> Assignment 8 </button>
+                </div>
+            </div>
+            <div class="img" align="center">
+                <img src="{{ url_for('static',filename='IMG/me.jpeg') }}" alt= "Me" onload="currentDate()" style="max-width: 80%; height: auto;">
+                <p id="currDate"></p>
+            </div>
+            <div class="contact">
+                <h1>Stay In Touch</h1>
+                <p>054-5903473</p>
+                    <hr class="hr">
+                <p>yosefcohen202@gmail.com</p>
+                <hr class="hr">
+                <a href="https://www.linkedin.com/in/yosef-cohen-0677621b4"><img src="{{ url_for('static',filename='IMG/linkedin.png') }}" alt= "linkedin" style="max-width: 10%; height: auto;"></a>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

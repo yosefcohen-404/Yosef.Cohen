@@ -1,0 +1,28 @@
+
+body {
+    font-family: Quicksand, Gisha;
+    line-height: 30px;
+    background-color:white;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    font-size:2vw;
+}
+p{
+    font-size:1.2vw;
+    margin:0.1vw;
+}
+.hr {
+  border: 0.01vw solid #bf9f5a;
+  margin-bottom: 0.1vw;
+}
+

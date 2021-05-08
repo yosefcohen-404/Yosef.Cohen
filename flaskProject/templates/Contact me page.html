@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <title>Yosef Cohen - Contact Me</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='CSS/GeneralCSS.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='CSS/contact me.css') }}">
+    <script src="{{ url_for('static',filename='JS.js') }}"></script>
+
+</head>
+<body>
+
+    
+    <form></form>
+        <div class="container">
+            <h1>Questions? Leave a massage!</h1>
+            <hr class="hr">
+
+            <label for="email"><b>Email:</b></label>
+            <input type="text" placeholder="User@mail.com" id="email" name="email" required>
+
+            <label for="nameU"><b>Name:</b></label>
+            <input type="text" placeholder="Your name"  id="nameU" name="nameU" required>
+
+            <label for="MSG"><b>Message:</b></label>
+            <br>
+            <textarea id="MSG" name="YourQuestions" placeholder="Its always nice to hear from you! be sure to be informative!"  cols="30" rows="10"></textarea>
+            <br>
+            <div class="wrap">
+             <button type="submit"  class="sendButton" onclick="MessBox(document.getElementById('email').value,document.getElementById('nameU').value,document.getElementById('MSG').value)">Send</button>
+             <button type="submit" class="sendButton"  onclick="location.href='/'"> Return to Home Page</button>
+            </div>
+        </div>
+
+    </form>
+
+</body>
+</html>
