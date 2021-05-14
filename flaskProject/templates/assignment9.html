@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% include('loggedinHeader.html') %}
+    <hr>
+    <h1>Search Form:</h1>
+    <form method="GET" action="/assignment9">
+        <input name="user_name_src" type="text" placeholder="user name to search">
+        <input type="submit">
+    </form>
+    {% if curr_method == "GET" %}
+        {% if not user_name_src %}
+            <h2> available users:</h2>
+            <ul>
+                {% for key in users %}
+                    <li>{{ key }}</li>
+                {% endfor %}
+            </ul>
+        {% elif  user_name_src in users %}
+            <h2> {{ user_name_src }} found!</h2>
+        {% else %}
+            <h2>user not found</h2>
+        {% endif %}
+    {% endif %}
+    <br>
+
+    <h1>Registration form:</h1>
+    {% if 'user_nickname' in session and session['user_nickname'] %}
+        <button type="submit" onclick="location.href='logout'">Logout</button>
+    {% else %}
+         <form method="POST" action="/assignment9">
+             <input name="user_name" type="text" placeholder="enter user name">
+             <input type="submit">
+         </form>
+    {% endif %}
+    <hr>
+    <br>
+    <button type="submit" onclick="location.href='/'">Return to Home Page</button>
+</body>
+</html>

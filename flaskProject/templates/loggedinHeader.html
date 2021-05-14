@@ -1,0 +1,4 @@
+{% if 'user_nickname' in session and session['user_nickname'] %}
+    <h2>logged in, {{ session['user_nickname'] }} </h2>
+{% endif %}
+
