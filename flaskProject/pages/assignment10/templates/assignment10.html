@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>ex10</title>
+    <script>
+        function MSG_box(){
+            alert("Query submitted, Database updated")
+        }
+    </script>
 </head>
 <body>
-    <h3>Users</h3>
-    <ul>
-        {% for user in users %}
-            <li>User's name: {{ user.name }}, User's nickname: {{ user.nickname }}</li>
-        {% endfor %}
-    </ul>
 
     <h3> Insert user form</h3>
     <form method="POST" action="/ex10insert">
         <input name="name" type="text" placeholder="enter user name">
         <input name="nickname" type="text" placeholder="enter user nickname">
-        <input type="submit">
+        <input type="submit" onclick="MSG_box()">
     </form>
 
     <h3> delete user form</h3>
     <form method="POST" action="/ex10delete">
         <input name="name" type="text" placeholder="user name to delete">
-        <input type="submit">
+        <input type="submit" onclick="MSG_box()">
     </form>
 
         <h3> Update user form</h3>
     <form method="POST" action="/ex10update">
         <input name="name" type="text" placeholder="enter user name">
         <input name="nickname" type="text" placeholder="enter user nickname">
-        <input type="submit">
+        <input type="submit" onclick="MSG_box()">
     </form>
+
+     <h3>Users</h3>
+    <ul>
+        {% for user in users %}
+            <li>User's name: {{ user.name }}, User's nickname: {{ user.nickname }}</li>
+        {% endfor %}
+    </ul>
     <br>
     <br>
     <button type="submit" onclick="location.href='/'">Return to Home Page</button>
