@@ -1,9 +1,10 @@
-from flask import Flask, render_template, redirect, url_for, request, session
+from flask import Flask, render_template, redirect, url_for, request, session, jsonify
 import mysql.connector
 from pages.assignment10.assignment10 import assignment10
+
 app = Flask(__name__)
 app.secret_key = '123'
-#app.config.from_pyfile('settings.py')
+
 app.register_blueprint(assignment10)
 
 
@@ -77,6 +78,53 @@ def a9():
 def logout():
     session['user_nickname'] = ''
     return redirect('/assignment9')
+
+
+@app.route("/assignment11/users")
+def assign11_users():
+    query = "select * from users"
+    query_result = interact_db(query=query, query_type='fetch')
+    response = "no data in users table"
+    if len(query_result) != 0:
+        response = query_result
+    response = jsonify(response)
+
+    return response
+
+
+@app.route("/assignment11/users/selected", defaults={'user_id': 1})
+@app.route("/assignment11/users/selected/<int:user_id>")
+def assign11_select_user(user_id):
+    query = "select * from users where user_id='%s';" % user_id
+    query_result = interact_db(query=query, query_type='fetch')
+    response = "please enter a correct user id"
+    if len(query_result) != 0:
+        response = query_result
+    response = jsonify(response)
+
+    return response
+
+
+def interact_db(query, query_type: str):
+    return_value = False
+    connection = mysql.connector.connect(host='localhost',
+                                         user='root',
+                                         passwd='root',
+                                         database='web')
+    cursor = connection.cursor(named_tuple=True)
+    cursor.execute(query)
+
+    if query_type == 'commit':
+        connection.commit()
+        return_value = True
+
+    if query_type == 'fetch':
+        query_result = cursor.fetchall()
+        return_value = query_result
+
+    connection.close()
+    cursor.close()
+    return return_value
 
 
 if __name__ == '__main__':

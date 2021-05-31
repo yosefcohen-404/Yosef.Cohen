@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, session, Blueprint
+from flask import Flask, render_template, redirect, url_for, request, session, Blueprint, jsonify
 import mysql.connector
 
 assignment10 = Blueprint('assignment10', __name__, static_folder='static',
